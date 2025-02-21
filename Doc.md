@@ -1,4 +1,11 @@
-https://www.serverless.com/
+## How to setup aws lambda using serverless
+
+[Microservices Part 3](https://www.youtube.com/watch?v=jc0xKZH8bL8&list=PLaLqLOj2bk9Y0GmLjiXnX402SKYAGQiRr&index=3)
+
+[Github - user_service](https://github.com/codergogoi/nodejs-sls-master-class.io/blob/main/user_service/serverless.yml)
+
+
+1. https://www.serverless.com/
 
 > npm i serverless -g
 > sls --version
@@ -79,4 +86,23 @@ rm awscliv2.zip
 Run `aws help` to explore available commands. Let me know if you need help with AWS services! 😊
 
 
-[Microservices Part 3](https://www.youtube.com/watch?v=jc0xKZH8bL8&list=PLaLqLOj2bk9Y0GmLjiXnX402SKYAGQiRr&index=3)
+3.a Serverless v3
+   /Microservices/user-service 
+   npm install --save-dev typescript ts-node
+   npm install aws-lambda
+   npm install --dev @types/aws-lambda
+    
+
+1. In project root dir  (serverless v4)
+   /Microservices/user-service 
+   > install typescript globally
+
+   > npm install -g typescript 
+
+   > npm init -y
+
+   > sls plugin install --name serverless-offline or 
+   
+   > serverless-plugin install --name serverless-offline
+
+   > serverless-esbuild

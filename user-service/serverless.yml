@@ -1,16 +1,18 @@
-# "org" ensures this Service is used with the correct Serverless Framework Access Key.
-org: aasifserverless
-# "service" is the name of this project. This will also be added to your AWS resource names.
 service: user-service
+frameworkVersion: '3'
 
 provider:
   name: aws
-  runtime: nodejs20.x
+  runtime: nodejs18.x
 
 functions:
-  hello:
-    handler: handler.hello
+  signup:
+    handler: app/handler.signup
     events:
       - httpApi:
-          path: /
+          path: /signup
           method: get
+
+plugins:
+  - serverless-offline
+  - serverless-plugin-typescript
